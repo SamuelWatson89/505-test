@@ -1,0 +1,215 @@
+/* Custom fonts */
+@font-face {
+  font-family: 'DIN';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/DINCondensed-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('../fonts/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #000000;
+  color: #fdfd78;
+  font-family: 'DIN', Arial, Helvetica, sans-serif;
+  font-size: 20 px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.row {
+  padding-bottom: 10px;
+}
+
+nav {
+  font-size: 27px;
+  color: #16d452;
+  font-family: 'Myriad Pro Regular', Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: 300;
+}
+
+nav a {
+  color: #16d452;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fdfd78;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0px;
+}
+
+.nav-bar .nav-item {
+  display: block;
+  padding: 20px 10px;
+  order: 2;
+}
+
+.nav-bar .menu-toggle {
+  display: none;
+}
+
+.nav-bar .menu-toggle a {
+  color: #16d452;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+.text-green {
+  color: #16d452;
+}
+
+footer p {
+  font-size: 9px;
+  font-family: arial;
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons img {
+  margin: 10px;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  iframe {
+    height: 250px;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar .nav-item {
+    display: none;
+  }
+
+  .nav-bar .menu-toggle {
+    display: block;
+  }
+
+  .nav-bar.responsive {
+    display: flex;
+  }
+
+  .nav-bar.responsive .menu-toggle {
+    display: block;
+    flex: 1;
+    order: 1;
+  }
+
+  .nav-bar.responsive .nav-item {
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  iframe {
+    height: auto;
+  }
+
+  .social-icons img {
+    width: 80%;
+  }
+}
